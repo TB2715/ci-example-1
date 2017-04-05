@@ -60,6 +60,10 @@ public class Calculator {
 			//if '+', '-', '*', '/' comeout add ' '.
 			//if this operator is under the operator in the top stack, then pop and add
 
+			if(endON == true) {
+				postfix = postfix.concat(" ");
+				endON = false;
+			}
 	}
 		
     }
