@@ -41,7 +41,24 @@ public class Calculator {
 			break;
 			
 			case ')': //if ')' appear,  add ' ' and pop until '(' appear
+			
+			if(endON == true) {
+				postfix = postfix.concat(" ");
+				endON = false;
+			}
+			
+			while(((Character) stack.peek()).charValue()!='('){
+				postfix = postfix.concat(((Character) stack.pop()).toString());
+				postfix = postfix.concat(" "); //add ' ' when pop
+			}
+			Object o = stack.pop(); // pop, if '(' comeout
 
+			case '+';
+			case '-';
+			case '*';
+			case '/';
+			//if '+', '-', '*', '/' comeout add ' '.
+			//if this operator is under the operator in the top stack, then pop and add
 
 	}
 		
